@@ -1,0 +1,259 @@
+ 
+
+.cbp-vimenu {
+	position: fixed; 
+	top: 0;
+	left: 0;
+	height: 100%;
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	background: #fafafa; 
+    -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, .5);
+            box-shadow: 0 5px 10px rgba(0, 0, 0, .5);
+	z-index:9;
+	overflow:hidden;
+}
+
+.cbp-vimenu:hover { 
+width:5em;
+} 
+.cbp-vimenu li a {
+	display: block;
+	text-indent: -500em;
+	height: 5em;
+	width: 5em;
+	line-height: 5em;
+	text-align: center;
+	color: #555;
+	position: relative;
+	border-bottom: 1px solid rgba(0,0,0,0.05);
+	position:relative;
+	background:#fafafa;
+}
+
+.cbp-vimenu li a:hover {    
+	color: #333; 
+	box-shadow:inset 0 0 5px #999;
+	background:#f5f5f5;}  
+.cbp-vimenu li a.active {   
+	color: #333; 
+	box-shadow:inset 0 0 5px #999;
+	background:#f5f5f5;}  
+	 
+	 
+.cbp-vimenu li:first-child a{
+	background: #47a3da;
+	color: #fff;
+}
+
+.cbp-vimenu li.logout {
+    position: fixed;
+    bottom: 0px; }
+@media (max-height:450px){
+.cbp-vimenu li.logout {
+    position: relative;
+    bottom: auto; }
+	}
+
+@media (max-width:1100px){
+
+.cbp-vimenu { 
+	width: 100%; 
+	height: 48px;
+    -webkit-box-shadow: 0 5px 7px rgba(0, 0, 0, .3);
+            box-shadow: 0 5px 7px rgba(0, 0, 0, .3);
+}
+.cbp-vimenu:hover {
+width:100%;
+}
+
+.cbp-vimenu li {display:inline-block;}
+.cbp-vimenu li:hover {display:inline-block;}
+.cbp-vimenu li.logout {
+    position: relative;
+    bottom: auto; }
+iframe {margin-top:50px; height:93%;}
+
+.cbp-vimenu li a {  
+	text-indent: 0px;
+	padding: 15px 5px 0 5px;
+	height: 5em;
+	width: 100px;
+	margin-right:5px;
+	line-height: 3em;}
+.cbp-vimenu li a:hover,.cbp-vimenu li a:focus {  
+	text-indent: 0px;
+	padding: 15px 5px 0 5px;
+	height: 5em;
+	width: 100px;
+	margin-right:5px;
+	line-height: 3em;
+	text-align:center;
+	margin-left:0;
+	box-shadow:inset 0 0 5px #999;}
+	
+.cbp-vimenu li a.icon-logo {width:50px;}
+}
+/* class for current item */
+.cbp-vimenu li.cbp-vicurrent a {
+	background: #fff;
+	color: #47a3da;
+}
+
+.cbp-vimenu li a:before {
+	font-family: 'Glyphicons Halflings';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	text-indent: 0em;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	font-size: 1.4em;
+	-webkit-font-smoothing: antialiased;
+}
+
+.cbp-vimenu li a.icon-logo:before {
+	/*content: "C";*/
+	content: "";
+	background:#2299dd url(../../../images/sipade.gif) no-repeat top center;
+	font-weight: 700;
+	font-size: 300%;
+	font-family: 'Lato', Calibri, Arial, sans-serif;
+}
+.cbp-vimenu li a:focus.icon-logo:before {
+box-shadow:inset 0 0 5px #666;
+}
+ 
+/* Example for media query (depends on total height of menu) */
+/*@media screen and (max-height: 34.9375em) { 
+
+	.cbp-vimenu {
+		font-size: 70%;
+	}
+
+}
+*/
+.cbp-vimenu {
+		font-size: 70%;
+		
+	}
+
+
+
+.cbp-vimenu-sub {
+	position: fixed; 
+	top: 0;
+	left: 48px;
+	height: 100%;
+	list-style-type: none;
+	margin: 0;
+	padding: 0 0 0 0px;
+	background: #f5f5f5; 
+	border-color:#ddd;
+	border-style:solid;
+	border-width:0 5px 0 0;
+	box-shadow:0 0 10px #666;
+	z-index:8;
+	overflow:hidden;
+	width:175px;
+	color:#666; 
+	
+}
+
+.cbp-vimenu-sub:before {
+position:absolute; top:}
+.cbp-vimenu-sub:hover {  
+} 
+ 
+.cbp-vimenu-sub {display:none; overflow:hidden;}
+.cbp-vimenu-sub:hover { overflow-y:auto; overflow-x:hidden;}
+.cbp-vimenu-sub-show {display:block;}
+.cbp-vimenu-sub .text {padding:5px 5px 5px 10px;}
+.cbp-vimenu-sub ul {list-style:none; margin:0; padding:0; text-align:left;}
+.cbp-vimenu-sub ul li {width:100%; padding:10px 5px 10px 10px; margin:0; font-family:'Oswald',sans-serif; font-weight:400; font-size:16px; cursor:pointer; margin:0 0 0 0; background:#e5e5e5;}
+.cbp-vimenu-sub ul li:hover {background:#eee;}
+.cbp-vimenu-sub ul li.active {background:#eee;}
+.cbp-vimenu-sub ul li a,.cbp-vimenu-sub ul li a:hover,.cbp-vimenu-sub ul li a:active {display:block; color:#666;}
+.showli {width:100%; padding:5px 5px 5px 10px; margin:0 0 5px 0; }
+.cbp-vimenu-sub .input {width:150px; padding:3px 5px 2px 5px; border:1px solid #ddd; margin-right:5px; background:#FAFAFA;color:#222; float:left; position:relative; text-align:center;}
+.cbp-vimenu-sub .disabled {width:155px; height:23px; position:relative; margin:0;border:1px solid #ddd; background:#FFF; opacity:0.5; font-size:10px; cursor:help; } 
+.cbp-vimenu-sub .input:hover {background:#fff;}
+.cbp-vimenu-sub  .button[type="button"], .button[type="reset"], .button[type="submit"] {margin-top:-1px; color:#ddd;}
+.cbp-vimenu-sub .output {width:155px; background:#eee; padding:5px 5px 5px 10px; margin:10px 0 0 0;font-family:'Oswald',sans-serif; font-weight:400; font-size:16px; text-align:center; border:1px solid #ccc;}
+.cbp-vimenu-sub .showli {margin:0; background:#eee;}
+.cbp-vimenu-sub hr {color:#fff; border: medium none; border-top:1px solid #ccc;border-bottom:1px solid #fff;}
+.cbp-vimenu-sub select {margin:10px 0 10px 0; color:#999;text-overflow: "";text-indent: 0.01px; cursor:text; height:25px;}
+.cbp-vimenu-sub select option {color:#333; border:medium none; cursor:pointer; height:25px; padding-top:5px;}
+@media (max-width:1100px){
+
+.cbp-vimenu li.logout {
+    position: fixed;
+    right: 0px; 
+top:-1px;	}
+.cbp-vimenu-sub { 
+top:45px;
+left:0;
+	width: 98%; 
+	min-width:950px;
+	height: auto;
+	max-height: 90%;
+	padding: 5px 0 0 0;
+	background: #f5f5f5; 
+	border-color:#ddd;
+	border-style:solid;
+	border-width:0 0 5px 0;
+	box-shadow:0 0 10px #666;
+}
+.cbp-vimenu-sub:hover { 
+}
+.cbp-vimenu-sub ul { width:180px; margin-top:0; box-shadow: 0 0 5px #666;}
+
+.cbp-vimenu-sub ul li {display:inline-block; width:100%; padding:10px 0 0 5px; height:45px; background:#ddd;}  
+.cbp-vimenu-sub ul li.active {background:#eee;}  
+iframe {margin-top:45px; height:93%;}
+  .cbp-vimenu-sub .output {position :absolute; left:200px; top:0;width:700px;  max-width:700px; background:#eee; padding:5px 5px 5px 10px; font-size:24px; }
+ 
+	
+.cbp-vimenu-sub li a.icon-logo {width:50px;}
+ 
+
+}
+
+@media (max-width:960px){
+.cbp-vimenu li.logout {
+    position: relative; margin-top:1px; }
+	}
+/* class for current item */
+.cbp-vimenu-sub li.cbp-vicurrent a {
+	background: #fff;
+	color: #47a3da;
+}
+
+.cbp-vimenu-sub li a:before {
+	font-family: 'Glyphicons Halflings';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	text-indent: 0em;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	font-size: 1.4em;
+	-webkit-font-smoothing: antialiased;
+}
+
+.cbp-vimenu-sub li a.icon-logo:before {
+	/*content: "C";*/
+	content: "";
+	background:#2299dd url(../../../images/sipade.gif) no-repeat top center;
+	font-weight: 700;
+	font-size: 300%;
+	font-family: 'Oswald', Calibri, Arial, sans-serif;
+}
+ 

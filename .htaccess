@@ -1,0 +1,49 @@
+<Files ~ "^\.(htaccess|htpasswd)$">
+deny from all
+</Files>
+ErrorDocument 404 http://localhost/sipaderw2/404.php
+order deny,allow
+
+DirectoryIndex index_check.php
+<IfModule mod_rewrite.c>
+RewriteEngine on
+#RewriteBase /
+RedirectMatch 403 /+(bootstrap|bootstrap\/+.*|rakstrap|rakstrap\/+.*|inc|fungsi|(inc|fungsi)/.*\.php|fonts|images|template_surat|template_surat\/+.*)/$
+    
+RewriteRule ^auth$ auth.php [L]
+RewriteRule ^index$ loader.php [L]
+RewriteRule ^!(.*)$ loader.php?page=$1 [L]
+RewriteRule ^([0-9]+)$ index.php?no_kk=$1 [L]
+RewriteRule ^add([0-9]+)$ index.php?open=1&no_kk=$1 [L]
+RewriteRule ^getprint-([0-9]+)$ print/index.php?no_kk=$1 [L]
+RewriteRule ^print-([0-9]+)$ print_kk.php?no_kk=$1 [L]
+RewriteRule ^print-hal-([0-9]+)-([0-9]+)$ print_kk.php?hal=$1&no_kk=$2 [L]
+RewriteRule ^modal_getprintkk-([0-9]+)$ template_surat/modal_f-101.php?no_kk=$1 [L]
+RewriteRule ^modal_getprintkk-N$ template_surat/modal_f-101.php?no_kk=N [L]
+RewriteRule ^printkk-([0-9]+)$ template_surat/f-101.php?no_kk=$1 [L]
+RewriteRule ^printkk-hal-([0-9]+)-([0-9]+)$ template_surat/f-101.php?hal=$1&no_kk=$2 [L] 
+
+RewriteRule ^arsip_surat/([0-9]+)/([0-9]+)/images/(.*)$ images/$3 [L]
+RewriteRule ^beranda$ listpen.php?filterstatusnya=a&filterhdk=0&filterrw=0&filterrt=0&tampilan=2&jph=20&hal=1&by=0&query= [L]
+RewriteRule ^dt_induk$ data_induk.php [L]
+RewriteRule ^db$ dataumum.php [L]
+RewriteRule ^data$ listpen.php [L]
+RewriteRule ^data!st([0-9]+)!hdk([0-9]+)!rw([0-9]+)!rt([0-9]+)@([0-9]+)!(.*)$ listpen.php?filterstatusnya=$1&filterhdk=$2&filterrw=$3&filterrt=$4&hal=$5&query=$6 [L]
+RewriteRule ^data!st([0-9\a-z]+)!hdk([0-9]+)!rw([0-9]+)!rt([0-9]+)@([0-9]+)@([0-9]+)!(.*)$ listpen.php?filterstatusnya=$1&filterhdk=$2&filterrw=$3&filterrt=$4&hal=$5&by=$6&query=$7 [L]
+RewriteRule ^data!st([0-9\a-z]+)!hdk([0-9]+)!rw([0-9]+)!rt([0-9]+)-([0-9]+)ph@([0-9]+)!(.*)$ listpen.php?filterstatusnya=$1&filterhdk=$2&filterrw=$3&filterrt=$4&jph=$5&hal=$6&query=$7 [L]
+RewriteRule ^data!st([0-9\a-z]+)!hdk([0-9]+)!rw([0-9]+)!rt([0-9]+)-([0-9]+)ph@([0-9]+)@([0-9]+)!(.*)$ listpen.php?filterstatusnya=$1&filterhdk=$2&filterrw=$3&filterrt=$4&jph=$5&hal=$6&by=$7&query=$8 [L]
+RewriteRule ^data!st([0-9\a-z]+)!hdk([0-9]+)!rw([0-9]+)!rt([0-9]+)-([0-9]+)phlist@([0-9]+)!(.*)$ listpen.php?filterstatusnya=$1&filterhdk=$2&filterrw=$3&filterrt=$4&tampilan=5&jph=$6&hal=$7&query=$8 [L]
+RewriteRule ^data!st([0-9\a-z]+)!hdk([0-9]+)!rw([0-9]+)!rt([0-9]+)-([0-9]+)phlist@([0-9]+)@([0-9]+)!(.*)$ listpen.php?filterstatusnya=$1&filterhdk=$2&filterrw=$3&filterrt=$4&tampilan=1&jph=$5&hal=$6&by=$7&query=$8 [L]
+
+
+RewriteRule ^edit_pen$ edit_pen.php [L]
+RewriteRule ^td_pen$ t_pen.php [L]
+RewriteRule ^td_kk$ t_pen.php?showfirst=popup [L]
+RewriteRule ^ts$ t_surat.php [L]
+RewriteRule ^ts@([0-9\@\a-z\A-Z\-]+)$ t_surat.php?nik=$1 [L]
+RewriteRule ^tkk$ tambah_data.php [L]
+RewriteRule ^arsip$ arsip.php [L]
+RewriteRule ^statistik$ statistik.php [L]
+RewriteRule ^pengaturan$ pengaturan.php [L]
+#Options All -Indexes
+</IfModule>

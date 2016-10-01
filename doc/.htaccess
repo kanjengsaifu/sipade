@@ -1,0 +1,19 @@
+<Files ~ "^\.(htaccess|htpasswd)$">
+deny from all
+</Files> 
+ErrorDocument 404 http://localhost/sipaderw2/404.php
+order deny,allow
+
+DirectoryIndex help_viewer.php
+<IfModule mod_rewrite.c>
+RewriteEngine on
+#RewriteBase / 
+RewriteRule ^index.php$ help_viewer.php [L]
+RewriteRule ^read!([0-9]+)$ help_viewer.php?mod=read&id=$1 [L]
+RewriteRule ^read!([0-9]+)-(.*)$ help_viewer.php?mod=read&id=$1&seo=$2 [L]
+RewriteRule ^post$ help_viewer.php?mod=post [L]
+RewriteRule ^edit!([0-9]+)$ help_viewer.php?mod=post&act=edit&id=$1 [L]
+ 
+
+#Options All -Indexes
+</IfModule>

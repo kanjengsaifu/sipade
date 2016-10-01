@@ -1,0 +1,74 @@
+/**
+ * Plugin  : Autocompletar con jQuery
+ *   Autor : Lucas Forchino
+ * WebSite : http://www.tutorialjquery.com
+ * version : 1.0
+ * Licencia: Pueden usar libremenete este código siempre y cuando no sea para 
+ *           publicarlo como ejemplo de autocompletar en otro sitio.
+ */
+ 
+/* El cuadro donde se encontrara nuestra caja de autocompletar*/
+.autocomplete-jquery-aBox{
+    margin: 20px 20px 20px 50px;
+    position: relative;
+}
+/* la etiqueta de autocompletar*/
+.autocomplete-jquery-aBox label{
+    margin-right: 20px;
+    margin-top: 30px;
+    display: block;
+}
+/* El input, tiene un tamaño de 250 , pero se podria cambiar y deberia 
+*  el script darse cuenta de esto cambiando tambien el tamaño del box de
+*  sugerencias. 
+*/
+.autocomplete-jquery-aBox input{
+    height: 20px;
+    width: 250px;
+}
+
+/*
+ * Resultados
+ */
+.autocomplete-jquery-results{
+    border:1px solid silver;
+    float:right;
+    margin-top:2px;
+   # margin-top:30px; /*fix for IE7*/
+    position:absolute;
+    display: none;
+    z-index: 999;
+}
+
+/* Si ubica el mouse sobre el imput toma este estilo*/
+.autocomplete-jquery-aBox input:focus{
+    border: 1px solid #41B5EA;
+    box-shadow:0px 0px 3px #41B5EA;
+    height: 20px;
+    width: 250px;
+}
+
+/*Esta clase se activa cuando el usuario se mueve por las sugerencias*/
+.autocomplete-jquery-mark{
+    color:black;
+    background-color: #E0F0FF !important;
+}
+
+/* Cada sugerencia va a llevar esta clase, por lo tanto tomara el estilo siguiente */
+.autocomplete-jquery-item{
+    border-bottom: 1px solid lightgray;
+    display: block;
+    height: 25px;
+    padding-top: 5px;
+    text-decoration: none;     
+    padding-left: 3px;  
+    background-color: white;
+}
+.autocomplete-jquery-results{
+     box-shadow: 1px 1px 3px black;
+}
+/* Al pasar por ensima de las sugerencias*/
+.autocomplete-jquery-item:hover{
+    background-color: #E0F0FF;
+    color:black;
+}
