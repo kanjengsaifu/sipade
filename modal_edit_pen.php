@@ -292,9 +292,18 @@ $arsip_goldar = mysql_query("select * from arsip_goldar");
 	  </table> 
        </div> 
  <div class="modal-footer">        
-    <div class="btn-group">
-	<button type="submit" id="e_pen_cek" data-loading-text="Memproses..." class="btn  btn-default disabled"><span class="glyphicon glyphicon-floppy-open"></span> PROSES</button> 
-  </div>  <input type="checkbox" class="btn btn-primary" id="aktifkan"> Cek Jika Data Sudah Benar
+<div class="btn-group">
+		<button  type="submit" id="e_pen_cek" data-loading-text="Memproses..." class="btn  btn-default disabled">
+		<span class="glyphicon glyphicon-floppy-open"></span> PROSES</button>
+
+<div class="btn-group"> 
+<label class="btn btn-default"> 
+<span class="label">
+<input type="checkbox" class="active" id="aktifkan">
+<span class="badge">Saklar Tombol</span>
+</span></label>
+</div>
+		</div>
         <button type="button" class="btn btn-default" style="float:right;" data-dismiss="modal">Tutup</button>
 </div>
        </div> 
